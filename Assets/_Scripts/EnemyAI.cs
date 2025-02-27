@@ -114,6 +114,7 @@ public class EnemyAI : MonoBehaviour
         {
             Debug.Log("caught");
             currentState = AIState.Caught;
+            GameManager.Instance.PlayerCaught();
             return;
         }
 

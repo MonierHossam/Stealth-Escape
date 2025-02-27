@@ -46,8 +46,11 @@ public class PlayerMovement : MonoBehaviour
 
     void Update()
     {
-        HandleMovement();
-        HandleMouseLook();
+        if (GameManager.Instance.currentGameState == GameState.Playing)
+        {
+            HandleMovement();
+            HandleMouseLook();
+        }
     }
 
     private void PlayerMoved(Vector2 value)
